@@ -68,13 +68,7 @@ namespace dtp8_MUD_ava
             labyrinth[1] = R;
 
             currentRoom = 0;
-
-            string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            string bitmapFileName = baseDir + "/ingang-stangd.png";
-            if(File.Exists(bitmapFileName))
-            {
-                RoomImage.Source = new Bitmap(bitmapFileName);
-            }
+            DisplayCurrentRoom();
         }
         private void ApplicationKeyPress(object sender, KeyEventArgs e)
         {
